@@ -1,9 +1,8 @@
 export function Navbar() {
   return (
     <nav>
-      <div>
-        <h1>Github Api</h1>
-      </div>
+      <h1>Github Api</h1>
+
       <div>
         <Search />
       </div>

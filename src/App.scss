@@ -1,0 +1,18 @@
+$letter: 16px;
+
+/* Pallete Color */
+$colorApp: #202020;
+$colorFamily: #ffffff;
+
+/* Font Family */
+$letterFamily: sans-serif;
+
+html {
+  font-size: $letter;
+  color: $colorFamily;
+}
+
+body {
+  margin: 0;
+  background-color: $colorApp;
+}
