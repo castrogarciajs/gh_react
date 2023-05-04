@@ -14,7 +14,7 @@
 }
 
 .Header {
-  padding: 1.5rem;
+  padding: 1.3rem;
   background-color: App.$colorFamily;
   color: App.$colorBlack;
 
@@ -37,6 +37,9 @@
     border-radius: 1rem;
     border: 0.1rem solid App.$colorGray;
     padding: 0.4rem;
+    width: 17rem;
+
+    @include App.input;
   }
 
   .form-search-button {

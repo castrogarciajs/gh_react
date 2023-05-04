@@ -36,5 +36,13 @@ body {
   &:hover {
     background-color: $colorApp;
     color: $colorFamily;
+    transition: background 0.3s;
+  }
+}
+
+@mixin input($focus: $colorGray) {
+  &:focus {
+    border: 0.2rem solid $colorGray;
+    transition: border 0.1s;
   }
 }
