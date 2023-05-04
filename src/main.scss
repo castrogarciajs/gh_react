@@ -1,0 +1,17 @@
+$letter: 16px;
+
+/* Pallete Color */
+$backgroundApp: #202020;
+
+html {
+  font-size: $letter;
+}
+
+body {
+  margin: 0;
+  background-color: $backgroundApp;
+}
+
+.Header {
+  padding: 1rem;
+}

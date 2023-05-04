@@ -1,5 +1,5 @@
 import { HeaderProp } from "../utils/types";
 
 export function Header(props: HeaderProp) {
-  return <header {...props} />;
+  return <header {...props} className="Header" />;
 }
