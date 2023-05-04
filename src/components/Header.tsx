@@ -1,5 +1,6 @@
-import { HeaderProp } from "utils/types";
+import { HeaderProp } from "../utils/types";
+import { headerCSS } from "../utils/styles";
 
 export function Header(props: HeaderProp) {
-  return <div>{props.navbar}</div>;
+  return <header {...props} style={headerCSS} />;
 }

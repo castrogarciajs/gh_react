@@ -1,3 +1,3 @@
-export type HeaderProp = {
-  navbar: JSX.Element;
-};
+import { HTMLAttributes } from "react";
+
+export interface HeaderProp extends HTMLAttributes<HTMLElement> {}
