@@ -1,12 +1,7 @@
-import { createContext, ReactNode } from "react";
+import { createContext } from "react";
+import { ContextProp, Ctx } from "../utils/types";
 
-interface Data {
-  name: string;
-}
-interface ContextProp {
-  children: ReactNode;
-}
-export const context = createContext<Data | null>(null);
+export const context = createContext<Ctx | null>(null);
 
 export function ContextProvider({ children }: ContextProp) {
   return (
