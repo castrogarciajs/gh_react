@@ -1,0 +1,25 @@
+$letter: 16px;
+
+/* Pallete Color */
+$colorApp: #202020;
+$colorFamily: #ffffff;
+$colorBlack: #000000;
+
+/* Font Family */
+$letterFamily: sans-serif;
+
+@mixin theme($theme: $colorBlack) {
+  background: $theme;
+  box-shadow: 0 0 1px $theme;
+  color: $colorFamily;
+}
+
+html {
+  font-size: $letter;
+  color: $colorFamily;
+}
+
+body {
+  margin: 0;
+  background-color: $colorApp;
+}

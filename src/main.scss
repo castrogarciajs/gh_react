@@ -1,0 +1,17 @@
+@use "App";
+
+.Header {
+  padding: 1rem;
+  @include App.theme($theme: #ff0000);
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  h1 {
+    font-family: App.$letterFamily;
+  }
+}
