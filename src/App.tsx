@@ -7,9 +7,7 @@ function App() {
       <Header>
         <Navbar />
       </Header>
-      <div role="main" className="App">
-        <h2>Github Api</h2>
-      </div>
+      <main></main>
     </>
   );
 }

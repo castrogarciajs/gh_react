@@ -31,6 +31,13 @@
 
 .form-search {
   @extend %flexbox;
+
+  .form-search-text {
+    outline: App.$colorApp;
+    border-radius: 1rem;
+    border: 0.1rem solid App.$colorGray;
+    padding: 0.4rem;
+  }
 }
 
 @media screen and (max-width: App.$breakpoint-small) {
