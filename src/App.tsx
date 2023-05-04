@@ -1,5 +1,6 @@
 import { Header } from "./components/Header";
 import { Navbar } from "./components/Navbar";
+import { Main } from "./components/Main";
 
 function App() {
   return (
@@ -7,9 +8,9 @@ function App() {
       <Header>
         <Navbar />
       </Header>
-      <div role="main" className="App">
-        <h2>Github Api</h2>
-      </div>
+      <Main>
+        <h1>Hello world</h1>
+      </Main>
     </>
   );
 }

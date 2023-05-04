@@ -23,7 +23,7 @@ function Search() {
         required
       />
       <button type="submit" className="form-search-button">
-        Buscar
+        SEARCH
       </button>
     </form>
   );
