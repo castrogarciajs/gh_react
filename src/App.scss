@@ -43,6 +43,5 @@ body {
 @mixin input($focus: $colorGray) {
   &:focus {
     border: 0.2rem solid $colorGray;
-    transition: border 0.1s;
   }
 }

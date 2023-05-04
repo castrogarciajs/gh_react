@@ -36,7 +36,7 @@
     outline: App.$colorApp;
     border-radius: 1rem;
     border: 0.1rem solid App.$colorGray;
-    padding: 0.4rem;
+    padding: 0.6rem;
     width: 17rem;
 
     @include App.input;
@@ -45,7 +45,7 @@
   .form-search-button {
     background-color: transparent;
     border: 0.1rem solid App.$colorApp;
-    padding: 0.9rem;
+    padding: 0.7rem;
     width: 6rem;
     border-radius: 1rem;
 
