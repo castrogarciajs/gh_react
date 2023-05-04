@@ -3,31 +3,40 @@
 %letter {
   font-family: App.$letterFamily;
   font-weight: App.$letterBold;
+  margin: 0;
+}
+
+%flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 .Header {
-  padding: 0.8rem 1rem;
+  padding: 1.5rem;
   background-color: App.$colorFamily;
   color: App.$colorBlack;
 
   nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+    @extend %flexbox;
   }
 
   h1 {
     @extend %letter;
     @include App.title;
+    color: App.$colorText;
   }
+}
+
+.form-search {
+  @extend %flexbox;
 }
 
 @media screen and (max-width: App.$breakpoint-small) {
   .Header {
     nav {
       flex-direction: column;
-      gap: 0.9rem;
     }
   }
 }
