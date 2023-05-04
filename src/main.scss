@@ -2,6 +2,7 @@
 
 .Header {
   padding: 1rem;
+  @include App.theme($theme: #ff0000);
 
   nav {
     display: flex;
