@@ -6,7 +6,7 @@ interface Data {
 interface ContextProp {
   children: ReactNode;
 }
-const context = createContext<Data | null>(null);
+export const context = createContext<Data | null>(null);
 
 export function ContextProvider({ children }: ContextProp) {
   return (
