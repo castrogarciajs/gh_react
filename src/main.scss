@@ -1,17 +1,30 @@
 @use "App";
 
+%letter {
+  font-family: App.$letterFamily;
+  font-weight: App.$letterBold;
+}
+
 .Header {
-  padding: 1rem;
-  @include App.theme($theme: #ff0000);
+  padding: 0.8rem 1rem;
+  background-color: App.$colorFamily;
+  color: App.$colorBlack;
 
   nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
   }
 
   h1 {
-    font-family: App.$letterFamily;
+    @extend %letter;
+    @include App.title;
+  }
+}
+
+@media screen and (max-width: App.$breakpoint-small) {
+  nav {
+    flex-direction: row;
   }
 }

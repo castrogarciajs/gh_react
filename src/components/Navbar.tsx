@@ -1,20 +1,23 @@
 export function Navbar() {
   return (
-    <nav>
-      <h1>Github Api</h1>
-
-      <div>
-        <Search />
-      </div>
+    <nav role="navigation">
+      <h1>GITHUB USERNAME</h1>
+      <Search />
     </nav>
   );
 }
 
 function Search() {
   return (
-    <form>
-      <input type="text" placeholder="Que usuario quieres ver ?" />
-      <button type="submit">Buscar</button>
+    <form className="form-search">
+      <input
+        type="text"
+        placeholder="Que usuario quieres ver ?"
+        className="form-search-text"
+      />
+      <button type="submit" className="form-search-button">
+        Buscar
+      </button>
     </form>
   );
 }

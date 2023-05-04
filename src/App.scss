@@ -1,18 +1,18 @@
 $letter: 16px;
 
 /* Pallete Color */
-$colorApp: #202020;
+$colorText: #16a34a;
+$colorApp: #86efac;
 $colorFamily: #ffffff;
 $colorBlack: #000000;
 
 /* Font Family */
-$letterFamily: sans-serif;
+$letterFamily: Arial;
+$letterBold: 700;
 
-@mixin theme($theme: $colorBlack) {
-  background: $theme;
-  box-shadow: 0 0 1px $theme;
-  color: $colorFamily;
-}
+/*@media */
+
+$breakpoint-small: 768px;
 
 html {
   font-size: $letter;
@@ -22,4 +22,11 @@ html {
 body {
   margin: 0;
   background-color: $colorApp;
+}
+
+@mixin title($theme: $colorBlack) {
+  &:hover {
+    text-decoration: underline;
+    transition: text-decoration 0.2s;
+  }
 }
