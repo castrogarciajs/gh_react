@@ -1,5 +1,6 @@
 import { Header } from "./components/Header";
 import { Navbar } from "./components/Navbar";
+import { Main } from "./components/Main";
 
 function App() {
   return (
@@ -7,7 +8,9 @@ function App() {
       <Header>
         <Navbar />
       </Header>
-      <main></main>
+      <Main>
+        <h1>Hello world</h1>
+      </Main>
     </>
   );
 }

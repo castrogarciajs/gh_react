@@ -31,3 +31,10 @@ body {
     transition: text-decoration 0.2s;
   }
 }
+
+@mixin button($border: $colorApp) {
+  &:hover {
+    background-color: $colorApp;
+    color: $colorFamily;
+  }
+}

@@ -38,6 +38,17 @@
     border: 0.1rem solid App.$colorGray;
     padding: 0.4rem;
   }
+
+  .form-search-button {
+    background-color: transparent;
+    border: 0.1rem solid App.$colorApp;
+    padding: 0.9rem;
+    width: 6rem;
+    border-radius: 1rem;
+
+    @extend %letter;
+    @include App.button;
+  }
 }
 
 @media screen and (max-width: App.$breakpoint-small) {
