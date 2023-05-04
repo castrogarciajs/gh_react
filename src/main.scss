@@ -24,7 +24,10 @@
 }
 
 @media screen and (max-width: App.$breakpoint-small) {
-  nav {
-    flex-direction: row;
+  .Header {
+    nav {
+      flex-direction: column;
+      gap: 0.9rem;
+    }
   }
 }
