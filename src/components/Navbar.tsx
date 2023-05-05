@@ -6,9 +6,9 @@ import githubLogo from "../assets/github-mark-white.svg";
 export function Navbar() {
   return (
     <nav role="navigation">
-      <div className="containerLogo">
+      <a href="/" className="containerLogo">
         <img src={githubLogo} alt="github" />
-      </div>
+      </a>
       <Search />
       <ul className="list-navbar">
         <li>Pull Requests</li>

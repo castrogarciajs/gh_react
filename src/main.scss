@@ -22,8 +22,23 @@
     @extend %flexbox;
 
     .containerLogo {
+      &:hover {
+        opacity: 0.9;
+      }
       img {
-        width: 2.5rem;
+        width: 2.4rem;
+      }
+    }
+    .list-navbar {
+      @extend %flexbox;
+      list-style: none;
+
+      li {
+        color: white;
+
+        &:hover {
+          color: App.$color-header-text;
+        }
       }
     }
   }
@@ -37,7 +52,7 @@
 
 .form-search {
   @extend %flexbox;
-  flex: 0.295;
+  flex: 0.4;
   .form-search-text {
     outline: App.$color-header-bg;
     border-radius: 0.6rem;
