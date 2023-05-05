@@ -9,10 +9,12 @@ export interface User {
   html_url: string;
   login: string;
 }
+export interface ProfileProp {
+  username: User;
+}
 
 export type Ctx = {
-  sebastian: User | null;
-  SEBASTIAN: () => Promise<void>;
+  username: User | null;
 };
 
 export type ContextProp = {

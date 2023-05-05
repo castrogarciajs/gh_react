@@ -4,27 +4,12 @@ import { ContextProp, Ctx, User } from "../utils/types";
 export const context = createContext<Ctx | null>(null);
 
 export function ContextProvider({ children }: ContextProp) {
-  const [sebastian, setSebastian] = useState<User | null>(null);
+  const [username, setUsername] = useState<User | null>(null);
 
-  const SEBASTIAN = async () => {
-    const res = await fetch(
-      `${import.meta.env.VITE_GITHUB_USERNAME}/sebastian009w`,
-      {
-        method: "GET",
-      }
-    );
-
-    const data: User = await res.json();
-
-    if (!data) return console.log("User Not found");
-
-    setSebastian({ ...data });
-  };
   return (
     <context.Provider
       value={{
-        sebastian,
-        SEBASTIAN,
+        username,
       }}
     >
       {children}

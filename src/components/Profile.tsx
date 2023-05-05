@@ -1,19 +1,14 @@
-import { useProvider } from "../hooks/useContext";
+import { ProfileProp } from "../utils/types";
 
-export function Profile() {
-  const { sebastian } = useProvider();
-
-  if (!sebastian) return <p>username Not Found</p>;
-
+export function Profile({ username }: ProfileProp) {
   return (
     <div>
       <div>
-        <img src={sebastian.avatar_url} alt={sebastian.login} />
+        <img src={username.avatar_url} alt={username.login} />
       </div>
+
       <div>
-        <a href={sebastian.html_url} target="_blank">
-          Github
-        </a>
+        <a href={username.html_url}>Github</a>
       </div>
     </div>
   );
