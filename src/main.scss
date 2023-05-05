@@ -54,6 +54,28 @@
   }
 }
 
+.main-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.card-profile {
+  background-color: App.$colorFamily;
+  box-shadow: 0 0.625rem 0.9375rem -0.1875rem App.$colorBox,
+    0 4px 6px -4px App.$colorBox;
+  padding: 8rem;
+  overflow: hidden;
+  border-radius: 1rem;
+
+  .card-image {
+    img {
+      width: 6rem;
+    }
+  }
+}
+
 @media screen and (max-width: App.$breakpoint-small) {
   .Header {
     nav {

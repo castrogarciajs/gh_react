@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useProvider } from "./hooks/useContext";
 import { User } from "./utils/types";
 
 import { Header } from "./components/Header";
@@ -8,7 +9,7 @@ import { Profile } from "./components/Profile";
 
 function App() {
   const [sebastian, setSebastian] = useState<User | null>(null);
-
+  const { username } = useProvider();
   useEffect(() => {
     const SEBASTIAN = async () => {
       const res = await fetch(
@@ -34,7 +35,11 @@ function App() {
         <Navbar />
       </Header>
       <Main>
-        {sebastian ? <Profile username={sebastian} /> : "User Not Found"}
+        {!username ? (
+          <Profile username={sebastian} />
+        ) : (
+          <Profile username={username} />
+        )}
       </Main>
     </>
   );
