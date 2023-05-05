@@ -37,19 +37,19 @@
 
 .form-search {
   @extend %flexbox;
-
+  flex: 0.4;
   .form-search-text {
     outline: App.$color-header-bg;
     border-radius: 0.6rem;
     border: 0.1rem solid App.$color-fg-muted;
     background: transparent;
     padding: 0.6rem;
-    width: 17rem;
+    width: 100%;
 
     @include App.input;
-    ::placeholder {
-      color: App.$color-header-log;
-    }
+  }
+  .form-search-text::placeholder {
+    color: App.$color-header-log;
   }
 }
 
