@@ -40,23 +40,16 @@
 
   .form-search-text {
     outline: App.$color-header-bg;
-    border-radius: 1rem;
+    border-radius: 0.6rem;
     border: 0.1rem solid App.$color-fg-muted;
+    background: transparent;
     padding: 0.6rem;
     width: 17rem;
 
     @include App.input;
-  }
-
-  .form-search-button {
-    background-color: transparent;
-    border: 0.1rem solid App.$color-fg-default;
-    padding: 0.7rem;
-    width: 6rem;
-    border-radius: 1rem;
-
-    @extend %letter;
-    @include App.button;
+    ::placeholder {
+      color: App.$color-header-log;
+    }
   }
 }
 

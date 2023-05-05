@@ -33,14 +33,11 @@ function Search() {
       <input
         type="text"
         name="username"
-        placeholder="Que usuario quieres ver ?"
+        placeholder="Search or jump to..."
         className="form-search-text"
         required
         onChange={(e) => setUsername(e.target.value)}
       />
-      <button type="submit" className="form-search-button">
-        SEARCH
-      </button>
     </form>
   );
 }
