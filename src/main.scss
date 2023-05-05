@@ -62,9 +62,10 @@
 }
 
 .card-profile {
+  background-color: App.$colorFamily;
   box-shadow: 0 0.625rem 0.9375rem -0.1875rem App.$colorBox,
     0 4px 6px -4px App.$colorBox;
-  padding: 1rem;
+  padding: 8rem;
   overflow: hidden;
   border-radius: 1rem;
 

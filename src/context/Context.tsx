@@ -11,8 +11,10 @@ export function ContextProvider({ children }: ContextProp) {
       `${import.meta.env.VITE_GITHUB_USERNAME}/${profile}`
     );
 
-    const data = await res.json();
-    console.log(data);
+    const data: User = await res.json();
+    if (!data) return console.log("no found");
+
+    setUsername(data);
   };
   return (
     <context.Provider

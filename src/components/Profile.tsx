@@ -8,6 +8,7 @@ export function Profile({ username }: ProfileProp) {
       </div>
 
       <div className="card-network">
+        <p>{username.login}</p>
         <a href={username.html_url}>Github</a>
       </div>
     </div>
