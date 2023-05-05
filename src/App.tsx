@@ -8,22 +8,31 @@ import { Main } from "./components/Main";
 import { Profile } from "./components/Profile";
 
 function App() {
-  const [sebastian, setSebastian] = useState<User | null>(null);
+  const [sebastian, setSebastian] = useState<User>({
+    login: "",
+    avatar_url: "",
+    html_url: "",
+  });
   const { username } = useProvider();
+
   useEffect(() => {
     const SEBASTIAN = async () => {
-      const res = await fetch(
-        `${import.meta.env.VITE_GITHUB_USERNAME}/sebastian009w`,
-        {
-          method: "GET",
-        }
-      );
+      try {
+        const res = await fetch(
+          `${import.meta.env.VITE_GITHUB_USERNAME}/sebastian009w`,
+          {
+            method: "GET",
+          }
+        );
 
-      const data: User = await res.json();
+        const data: User = await res.json();
 
-      if (!data) return console.log("User Not found");
+        if (!data) return console.log("User Not found");
 
-      setSebastian({ ...data });
+        setSebastian({ ...data });
+      } catch (error) {
+        throw new Error(`ERROR: ${error}`);
+      }
     };
 
     SEBASTIAN();

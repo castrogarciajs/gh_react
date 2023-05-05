@@ -15,8 +15,8 @@
 
 .Header {
   padding: 1.3rem;
-  background-color: App.$colorFamily;
-  color: App.$colorBlack;
+  background-color: App.$color-header-bg;
+  color: App.$color-fg-muted;
 
   nav {
     @extend %flexbox;
@@ -25,7 +25,7 @@
   h1 {
     @extend %letter;
     @include App.title;
-    color: App.$colorText;
+    color: App.$color-header-text;
   }
 }
 
@@ -33,9 +33,9 @@
   @extend %flexbox;
 
   .form-search-text {
-    outline: App.$colorApp;
+    outline: App.$color-header-bg;
     border-radius: 1rem;
-    border: 0.1rem solid App.$colorGray;
+    border: 0.1rem solid App.$color-fg-muted;
     padding: 0.6rem;
     width: 17rem;
 
@@ -44,7 +44,7 @@
 
   .form-search-button {
     background-color: transparent;
-    border: 0.1rem solid App.$colorApp;
+    border: 0.1rem solid App.$color-fg-default;
     padding: 0.7rem;
     width: 6rem;
     border-radius: 1rem;
@@ -62,9 +62,8 @@
 }
 
 .card-profile {
-  background-color: App.$colorFamily;
-  box-shadow: 0 0.625rem 0.9375rem -0.1875rem App.$colorBox,
-    0 4px 6px -4px App.$colorBox;
+  box-shadow: 0 0.625rem 0.9375rem -0.1875rem App.$color-canvas-default,
+    0 4px 6px -4px App.$color-canvas-default;
   padding: 8rem;
   overflow: hidden;
   border-radius: 1rem;

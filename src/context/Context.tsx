@@ -6,15 +6,19 @@ export const context = createContext<Ctx | null>(null);
 export function ContextProvider({ children }: ContextProp) {
   const [username, setUsername] = useState<User | null>(null);
 
-  const GET = async (profile) => {
-    const res = await fetch(
-      `${import.meta.env.VITE_GITHUB_USERNAME}/${profile}`
-    );
+  const GET = async (profile: string | null) => {
+    try {
+      const res = await fetch(
+        `${import.meta.env.VITE_GITHUB_USERNAME}/${profile}`
+      );
 
-    const data: User = await res.json();
-    if (!data) return console.log("no found");
+      const data: User = await res.json();
+      if (!data) return console.log("no found");
 
-    setUsername(data);
+      setUsername(data);
+    } catch (error) {
+      throw new Error(`ERROR: ${error}`);
+    }
   };
   return (
     <context.Provider
