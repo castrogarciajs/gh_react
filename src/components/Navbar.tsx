@@ -10,6 +10,13 @@ export function Navbar() {
         <img src={githubLogo} alt="github" />
       </div>
       <Search />
+      <ul className="list-navbar">
+        <li>Pull Requests</li>
+        <li>Issues</li>
+        <li>Codespaces</li>
+        <li>Marketplace</li>
+        <li>Explore</li>
+      </ul>
     </nav>
   );
 }

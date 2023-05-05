@@ -14,7 +14,7 @@
 }
 
 .Header {
-  padding: 1.3rem;
+  padding: 1rem;
   background-color: App.$color-header-bg;
   color: App.$color-fg-muted;
 
@@ -37,7 +37,7 @@
 
 .form-search {
   @extend %flexbox;
-  flex: 0.4;
+  flex: 0.295;
   .form-search-text {
     outline: App.$color-header-bg;
     border-radius: 0.6rem;
