@@ -1,11 +1,14 @@
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 import { FormEventSubmit } from "../utils/types";
 import { useProvider } from "../hooks/useContext";
+import githubLogo from "../assets/github-mark-white.svg";
 
 export function Navbar() {
   return (
     <nav role="navigation">
-      <h1>GITHUB USERNAME</h1>
+      <div className="containerLogo">
+        <img src={githubLogo} alt="react" />
+      </div>
       <Search />
     </nav>
   );
