@@ -72,22 +72,19 @@
 }
 
 .main-root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
+  @extend %flexbox;
 }
 
 .card-profile {
   box-shadow: 0 0.625rem 0.9375rem -0.1875rem App.$color-canvas-default,
     0 4px 6px -4px App.$color-canvas-default;
-  padding: 8rem;
   overflow: hidden;
   border-radius: 1rem;
 
   .card-image {
     img {
-      width: 6rem;
+      width: 16rem;
+      border-radius: 50%;
     }
   }
 }
