@@ -8,18 +8,41 @@
 
 %flexbox {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   gap: 1rem;
 }
 
 .Header {
-  padding: 1.3rem;
+  padding: 0.8rem;
   background-color: App.$color-header-bg;
   color: App.$color-fg-muted;
 
   nav {
     @extend %flexbox;
+
+    .containerLogo {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.9;
+      }
+      img {
+        width: 2.4rem;
+      }
+    }
+    .list-navbar {
+      @extend %flexbox;
+      list-style: none;
+      cursor: pointer;
+
+      li {
+        color: white;
+
+        &:hover {
+          color: App.$color-header-text;
+        }
+      }
+    }
   }
 
   h1 {
@@ -31,26 +54,20 @@
 
 .form-search {
   @extend %flexbox;
-
+  flex: 0.4;
   .form-search-text {
+    color: App.$color-header-text;
     outline: App.$color-header-bg;
-    border-radius: 1rem;
+    border-radius: 0.6rem;
     border: 0.1rem solid App.$color-fg-muted;
+    background: transparent;
     padding: 0.6rem;
-    width: 17rem;
+    width: 100%;
 
     @include App.input;
   }
-
-  .form-search-button {
-    background-color: transparent;
-    border: 0.1rem solid App.$color-fg-default;
-    padding: 0.7rem;
-    width: 6rem;
-    border-radius: 1rem;
-
-    @extend %letter;
-    @include App.button;
+  .form-search-text::placeholder {
+    color: App.$color-header-log;
   }
 }
 
@@ -80,5 +97,8 @@
     nav {
       flex-direction: column;
     }
+  }
+  .form-search {
+    flex: 1;
   }
 }

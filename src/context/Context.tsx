@@ -6,7 +6,7 @@ export const context = createContext<Ctx | null>(null);
 export function ContextProvider({ children }: ContextProp) {
   const [username, setUsername] = useState<User | null>(null);
 
-  const GET = async (profile: string | null) => {
+  const GET = async (profile: string) => {
     try {
       const res = await fetch(
         `${import.meta.env.VITE_GITHUB_USERNAME}/${profile}`

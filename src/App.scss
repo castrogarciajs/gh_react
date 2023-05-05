@@ -43,6 +43,6 @@ body {
 
 @mixin input($focus: $color-header-bg) {
   &:focus {
-    border: 0.2rem solid $color-fg-default;
+    border: 0.1rem solid $color-fg-default;
   }
 }
