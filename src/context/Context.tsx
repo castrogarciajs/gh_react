@@ -18,6 +18,7 @@ export function ContextProvider({ children }: ContextProp) {
     <context.Provider
       value={{
         username,
+        GET,
       }}
     >
       {children}

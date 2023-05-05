@@ -1,5 +1,6 @@
-import { FormEvent } from "react";
+import { FormEvent, useEffect } from "react";
 import { FormEventSubmit } from "../utils/types";
+import { useProvider } from "../hooks/useContext";
 
 export function Navbar() {
   return (
@@ -11,9 +12,13 @@ export function Navbar() {
 }
 
 function Search() {
+  const { GET } = useProvider();
   const handleSubmit: FormEventSubmit = (e: FormEvent<HTMLFormElement>) =>
     e.preventDefault();
 
+  useEffect(() => {
+    GET("ry");
+  });
   return (
     <form className="form-search" onSubmit={handleSubmit}>
       <input

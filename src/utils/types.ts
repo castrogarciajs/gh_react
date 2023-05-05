@@ -15,6 +15,7 @@ export interface ProfileProp {
 
 export type Ctx = {
   username: User | null;
+  GET: (profile: string) => Promise<void>;
 };
 
 export type ContextProp = {
