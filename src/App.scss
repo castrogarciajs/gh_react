@@ -18,31 +18,31 @@ $breakpoint-small: 768px;
 
 html {
   font-size: $letter;
-  color: $colorBlack;
+  color: $color-header-text;
 }
 
 body {
   margin: 0;
-  background-color: $colorApp;
+  background-color: $color-canvas-default;
 }
 
-@mixin title($theme: $colorBlack) {
+@mixin title($theme: $color-header-log) {
   &:hover {
     text-decoration: underline;
     transition: text-decoration 0.2s;
   }
 }
 
-@mixin button($border: $colorApp) {
+@mixin button($border: $color-fg-default) {
   &:hover {
-    background-color: $colorApp;
-    color: $colorFamily;
+    background-color: $color-canvas-default;
+    color: $color-header-text;
     transition: background 0.3s;
   }
 }
 
-@mixin input($focus: $colorGray) {
+@mixin input($focus: $color-header-bg) {
   &:focus {
-    border: 0.2rem solid $colorGray;
+    border: 0.2rem solid $color-fg-default;
   }
 }

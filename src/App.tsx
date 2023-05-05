@@ -10,6 +10,7 @@ import { Profile } from "./components/Profile";
 function App() {
   const [sebastian, setSebastian] = useState<User | null>(null);
   const { username } = useProvider();
+
   useEffect(() => {
     const SEBASTIAN = async () => {
       const res = await fetch(
@@ -27,7 +28,7 @@ function App() {
     };
 
     SEBASTIAN();
-  }, []);
+  }, [sebastian]);
 
   return (
     <>
