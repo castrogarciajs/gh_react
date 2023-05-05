@@ -11,7 +11,7 @@ export interface User {
 }
 
 export type Ctx = {
-  username: User | null;
+  sebastian: User | null;
   SEBASTIAN: () => Promise<void>;
 };
 
