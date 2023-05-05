@@ -14,7 +14,7 @@
 }
 
 .Header {
-  padding: 1rem;
+  padding: 0.8rem;
   background-color: App.$color-header-bg;
   color: App.$color-fg-muted;
 
@@ -22,6 +22,7 @@
     @extend %flexbox;
 
     .containerLogo {
+      cursor: pointer;
       &:hover {
         opacity: 0.9;
       }
@@ -32,6 +33,7 @@
     .list-navbar {
       @extend %flexbox;
       list-style: none;
+      cursor: pointer;
 
       li {
         color: white;
@@ -54,6 +56,7 @@
   @extend %flexbox;
   flex: 0.4;
   .form-search-text {
+    color: App.$color-header-text;
     outline: App.$color-header-bg;
     border-radius: 0.6rem;
     border: 0.1rem solid App.$color-fg-muted;
@@ -94,5 +97,8 @@
     nav {
       flex-direction: column;
     }
+  }
+  .form-search {
+    flex: 1;
   }
 }

@@ -6,9 +6,9 @@ import githubLogo from "../assets/github-mark-white.svg";
 export function Navbar() {
   return (
     <nav role="navigation">
-      <a href="/" className="containerLogo">
+      <div className="containerLogo">
         <img src={githubLogo} alt="github" />
-      </a>
+      </div>
       <Search />
       <ul className="list-navbar">
         <li>Pull Requests</li>
@@ -43,6 +43,7 @@ function Search() {
         placeholder="Search or jump to..."
         className="form-search-text"
         required
+        value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
     </form>
