@@ -7,7 +7,7 @@ export function Navbar() {
   return (
     <nav role="navigation">
       <div className="containerLogo">
-        <img src={githubLogo} alt="react" />
+        <img src={githubLogo} alt="github" />
       </div>
       <Search />
     </nav>

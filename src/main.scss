@@ -8,7 +8,7 @@
 
 %flexbox {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   gap: 1rem;
 }
@@ -20,6 +20,12 @@
 
   nav {
     @extend %flexbox;
+
+    .containerLogo {
+      img {
+        width: 2.5rem;
+      }
+    }
   }
 
   h1 {
