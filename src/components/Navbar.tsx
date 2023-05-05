@@ -12,7 +12,7 @@ export function Navbar() {
 }
 
 function Search() {
-  const [username, setUsername] = useState<string | null>(null);
+  const [username, setUsername] = useState("");
   const { GET } = useProvider();
   const handleSubmit: FormEventSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
