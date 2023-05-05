@@ -1,16 +1,10 @@
 import { createContext, useEffect, useState } from "react";
-import { ContextProp, Ctx } from "../utils/types";
+import { ContextProp, Ctx, User } from "../utils/types";
 
 export const context = createContext<Ctx | null>(null);
 
-interface User {
-  avatarUrl: string;
-  github: string;
-  login: string;
-}
-
 export function ContextProvider({ children }: ContextProp) {
-  const [username, setUsername] = useState<User | null>();
+  const [username, setUsername] = useState<User | null>(null);
 
   const SEBASTIAN = async () => {
     const res = await fetch(
@@ -21,11 +15,12 @@ export function ContextProvider({ children }: ContextProp) {
 
     if (!data) return console.log("User Not found");
 
-    console.log(data);
+    setUsername({ ...data });
   };
   return (
     <context.Provider
       value={{
+        username,
         SEBASTIAN,
       }}
     >
