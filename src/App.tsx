@@ -33,9 +33,7 @@ function App() {
       <Header>
         <Navbar />
       </Header>
-      <Main>
-        {sebastian ? <Profile username={sebastian} /> : "User Not Found"}
-      </Main>
+      <Main>{sebastian ? <Profile username={sebastian} /> : "Loading"}</Main>
     </>
   );
 }
