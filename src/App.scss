@@ -46,3 +46,20 @@ body {
     border: 0.1rem solid $color-fg-default;
   }
 }
+
+@mixin button($button: #220) {
+  &:hover {
+    position: relative;
+    display: inline-block;
+
+    line-height: 20px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+
+    user-select: none;
+    border: 1px solid;
+
+    appearance: none;
+  }
+}
