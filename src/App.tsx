@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { Navbar } from "./components/Navbar";
 import { Main } from "./components/Main";
 import { Profile } from "./components/Profile";
+import { UserNotFound } from "./components/_404";
 
 function App() {
   const [sebastian, setSebastian] = useState<User>({
@@ -13,7 +14,7 @@ function App() {
     avatar_url: "",
     html_url: "",
   });
-  const { username } = useProvider();
+  const { username, userNotFound } = useProvider();
 
   useEffect(() => {
     const SEBASTIAN = async () => {
@@ -44,11 +45,16 @@ function App() {
         <Navbar />
       </Header>
       <Main>
-        {!username ? (
+        {userNotFound ? (
+          <UserNotFound />
+        ) : !username ? (
           <Profile username={sebastian} />
         ) : (
           <Profile username={username} />
         )}
+        <div className="main-repositorios">
+          <h2>repos</h2>
+        </div>
       </Main>
     </>
   );
