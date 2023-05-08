@@ -15,8 +15,8 @@ function App() {
     avatar_url: "",
     html_url: "",
   });
-  const [repos, setRepos] = useState<IRepositories[]>([]);
-  const { username, userNotFound } = useProvider();
+  const [repos, setRepos] = useState<IRepositories[] | null>([]);
+  const { username, userNotFound, repositorios } = useProvider();
 
   useEffect(() => {
     const SEBASTIAN = async () => {
@@ -68,7 +68,10 @@ function App() {
             </div>
           </div>
         ) : (
-          <Profile username={username} />
+          <>
+            <Profile username={username} />
+            <Repositories data={repositorios} />
+          </>
         )}
       </Main>
     </>

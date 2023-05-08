@@ -23,12 +23,13 @@ export function Navbar() {
 
 function Search() {
   const [username, setUsername] = useState("");
-  const { GET } = useProvider();
+  const { GET, REPOSITORIES } = useProvider();
   const handleSubmit: FormEventSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
       GET(username);
+      REPOSITORIES(username);
       setUsername("");
     } catch (error) {
       throw new Error("Error server");

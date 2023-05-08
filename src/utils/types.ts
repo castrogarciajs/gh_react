@@ -15,8 +15,10 @@ export interface ProfileProp {
 
 export type Ctx = {
   username: User | null;
+  repositorios: IRepositories[] | null;
   GET: (profile: string) => Promise<void>;
   userNotFound: boolean;
+  REPOSITORIES: (profile: string) => Promise<void>;
 };
 
 export type ContextProp = {
