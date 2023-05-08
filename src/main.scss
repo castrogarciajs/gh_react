@@ -133,13 +133,28 @@
 
 .flex-repos {
   display: flex;
-  justify-content: center;
+
   flex-wrap: wrap;
   gap: 2.5rem;
 }
 .repos-card {
-  border: 1px solid App.$color-fg-default;
-  border-radius: 1.5rem;
+  padding: 1rem;
+  width: 24rem;
+  background-color: #22272e;
+  border-color: #444c56;
+  border-radius: 1rem;
+  border-style: solid;
+  border-width: 1px;
+  .repos-name {
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+  }
+  .repos-body {
+    font-size: 1rem;
+    color: App.$color-fg-muted;
+  }
 }
 @media screen and (max-width: App.$breakpoint-small) {
   .Header {
