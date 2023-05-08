@@ -8,7 +8,7 @@ export function Repositories({ data }: PropRepos) {
     <div>
       {data.map((repos) => (
         <>
-          <h2>{repos.name}</h2>
+          <p>{repos.name}</p>
         </>
       ))}
     </div>
