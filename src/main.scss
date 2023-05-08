@@ -76,7 +76,15 @@
   margin: 1.2rem 0 0 0;
   color: App.$color-fg-default;
 }
-
+.header-github {
+  display: flex;
+  gap: 3rem;
+  .Repositories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 .card-profile {
   display: flex;
   flex-direction: column;
@@ -123,6 +131,31 @@
   }
 }
 
+.flex-repos {
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+.repos-card {
+  padding: 1rem;
+  width: 24rem;
+  background-color: #22272e;
+  border-color: #444c56;
+  border-radius: 1rem;
+  border-style: solid;
+  border-width: 1px;
+  .repos-name {
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+  }
+  .repos-body {
+    font-size: 1rem;
+    color: App.$color-fg-muted;
+  }
+}
 @media screen and (max-width: App.$breakpoint-small) {
   .Header {
     nav {

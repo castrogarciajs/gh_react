@@ -15,8 +15,8 @@ function App() {
     avatar_url: "",
     html_url: "",
   });
-  const [repos, setRepos] = useState<IRepositories[]>([]);
-  const { username, userNotFound } = useProvider();
+  const [repos, setRepos] = useState<IRepositories[] | null>([]);
+  const { username, userNotFound, repositorios } = useProvider();
 
   useEffect(() => {
     const SEBASTIAN = async () => {
@@ -58,16 +58,26 @@ function App() {
         {userNotFound ? (
           <UserNotFound />
         ) : !username ? (
-          <>
-            <Profile username={sebastian} />
-            <Repositories data={repos} />
-          </>
+          <div className="header-github">
+            <div>
+              <Profile username={sebastian} />
+            </div>
+
+            <div className="flex-repos">
+              <Repositories data={repos} />
+            </div>
+          </div>
         ) : (
-          <Profile username={username} />
+          <div className="header-github">
+            <div>
+              <Profile username={username} />
+            </div>
+
+            <div className="flex-repos">
+              <Repositories data={repositorios} />
+            </div>
+          </div>
         )}
-        <div className="main-repositorios">
-          <h2>repos</h2>
-        </div>
       </Main>
     </>
   );
