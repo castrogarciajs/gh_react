@@ -13,7 +13,7 @@ export function ContextProvider({ children }: ContextProp) {
       );
 
       const data: User = await res.json();
-      if (!data) return console.log("no found");
+      if (!data) return console.log("Not Data");
 
       setUsername(data);
     } catch (error) {

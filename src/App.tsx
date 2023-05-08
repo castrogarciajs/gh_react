@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { Navbar } from "./components/Navbar";
 import { Main } from "./components/Main";
 import { Profile } from "./components/Profile";
+import { UserNotFound } from "./components/_404";
 
 function App() {
   const [sebastian, setSebastian] = useState<User>({
@@ -50,7 +51,7 @@ function App() {
           <Profile username={username} />
         )}
         <div className="main-repositorios">
-          <h2>repositorios</h2>
+          <h2>repos</h2>
         </div>
       </Main>
     </>
