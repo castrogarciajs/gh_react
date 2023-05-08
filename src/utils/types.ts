@@ -24,6 +24,7 @@ export type ContextProp = {
 };
 
 export interface IRepositories {
+  id: number;
   name: string;
   description: string;
   html_url: string;

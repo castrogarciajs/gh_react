@@ -58,16 +58,18 @@ function App() {
         {userNotFound ? (
           <UserNotFound />
         ) : !username ? (
-          <>
-            <Profile username={sebastian} />
-            <Repositories data={repos} />
-          </>
+          <div className="header-github">
+            <div>
+              <Profile username={sebastian} />
+            </div>
+
+            <div>
+              <Repositories data={repos} />
+            </div>
+          </div>
         ) : (
           <Profile username={username} />
         )}
-        <div className="main-repositorios">
-          <h2>repos</h2>
-        </div>
       </Main>
     </>
   );

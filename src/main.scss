@@ -76,7 +76,15 @@
   margin: 1.2rem 0 0 0;
   color: App.$color-fg-default;
 }
-
+.header-github {
+  display: flex;
+  gap: 3rem;
+  .Repositories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 .card-profile {
   display: flex;
   flex-direction: column;

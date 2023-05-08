@@ -5,12 +5,20 @@ type PropRepos = {
 };
 export function Repositories({ data }: PropRepos) {
   return (
-    <div>
+    <>
       {data.map((repos) => (
-        <>
-          <p>{repos.name}</p>
-        </>
+        <div className="repos-card" key={repos.id}>
+          <div className="repos-name">
+            <a href={repos.html_url}>
+              <p>{repos.name}</p>
+            </a>
+          </div>
+          <div className="repos-body">
+            <span>{repos.description}</span>
+            <span>{repos.language}</span>
+          </div>
+        </div>
       ))}
-    </div>
+    </>
   );
 }
