@@ -9,8 +9,8 @@ export function Profile({ username }: ProfileProp) {
 
       <div className="card-network">
         <p>{username.login}</p>
-        <a href={username.html_url} target="_blank">
-          <button>Follow</button>
+        <a href={username.html_url} target="_blank" className="card-link">
+          <button className="card-button">Follow</button>
         </a>
       </div>
     </div>
