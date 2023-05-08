@@ -93,6 +93,9 @@
   }
 
   .card-network {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
     p {
       font-family: calibri;
       margin: 0.5rem 0 0 0;
@@ -104,8 +107,9 @@
       color: App.$color-fg-muted;
     }
     .card-link {
-      margin-top: 1rem;
       .card-button {
+        font-weight: 600;
+        font-size: 1rem;
         color: #adbac7;
         padding: 5px 16px;
         border-radius: 6px;
