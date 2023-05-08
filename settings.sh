@@ -3,6 +3,7 @@
 echo "que deseas realizar ?"
 
 read create
+read tests
 
 if [[ $create ]] 
 then
@@ -10,3 +11,9 @@ then
 else
     echo "vuelve pronto"    
 fi    
+
+if [[ $tests ]]
+then
+    npm run tests
+else
+    echo "vuelve pronto"
