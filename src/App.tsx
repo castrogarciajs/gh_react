@@ -20,10 +20,7 @@ function App() {
     const SEBASTIAN = async () => {
       try {
         const res = await fetch(
-          `${import.meta.env.VITE_GITHUB_USERNAME}/sebastian009w`,
-          {
-            method: "GET",
-          }
+          `${import.meta.env.VITE_GITHUB_USERNAME}/sebastian009w`
         );
 
         const data: User = await res.json();
@@ -37,6 +34,15 @@ function App() {
     };
 
     SEBASTIAN();
+
+    const startRepos = async () => {
+      const res = await fetch(
+        `${import.meta.env.VITE_GITHUB_USERNAME}/sebastian009w/repos`
+      );
+      const data = await res.json();
+      console.log(data);
+    };
+    startRepos();
   }, []);
 
   return (
