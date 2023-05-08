@@ -131,6 +131,16 @@
   }
 }
 
+.flex-repos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+.repos-card {
+  border: 1px solid App.$color-fg-default;
+  border-radius: 1.5rem;
+}
 @media screen and (max-width: App.$breakpoint-small) {
   .Header {
     nav {

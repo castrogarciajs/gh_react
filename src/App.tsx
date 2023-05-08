@@ -63,15 +63,20 @@ function App() {
               <Profile username={sebastian} />
             </div>
 
-            <div>
+            <div className="flex-repos">
               <Repositories data={repos} />
             </div>
           </div>
         ) : (
-          <>
-            <Profile username={username} />
-            <Repositories data={repositorios} />
-          </>
+          <div className="header-github">
+            <div>
+              <Profile username={username} />
+            </div>
+
+            <div className="flex-repos">
+              <Repositories data={repositorios} />
+            </div>
+          </div>
         )}
       </Main>
     </>
