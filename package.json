@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "jest"
+    "test": "vitest"
   },
   "dependencies": {
     "jsdom": "^22.0.0",
