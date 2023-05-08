@@ -14,7 +14,7 @@ function App() {
     avatar_url: "",
     html_url: "",
   });
-  const { username } = useProvider();
+  const { username, userNotFound } = useProvider();
 
   useEffect(() => {
     const SEBASTIAN = async () => {
@@ -45,7 +45,9 @@ function App() {
         <Navbar />
       </Header>
       <Main>
-        {!username ? (
+        {userNotFound ? (
+          <UserNotFound />
+        ) : !username ? (
           <Profile username={sebastian} />
         ) : (
           <Profile username={username} />
