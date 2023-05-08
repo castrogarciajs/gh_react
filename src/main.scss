@@ -72,19 +72,33 @@
 }
 
 .main-root {
-  @extend %flexbox;
+  font-size: 1.5rem;
+  margin: 1.2rem 0 0 0;
+  color: App.$color-fg-default;
 }
 
 .card-profile {
-  box-shadow: 0 0.625rem 0.9375rem -0.1875rem App.$color-canvas-default,
-    0 4px 6px -4px App.$color-canvas-default;
-  overflow: hidden;
-  border-radius: 1rem;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2.5rem 0 0 2.5rem;
   .card-image {
     img {
-      width: 16rem;
+      width: 18rem;
       border-radius: 50%;
+    }
+  }
+
+  .card-network {
+    p {
+      font-family: calibri;
+      margin: 0.5rem 0 0 0;
+      opacity: 0.7;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 300, 300;
+      line-height: 24px;
+      color: App.$color-fg-muted;
     }
   }
 }
