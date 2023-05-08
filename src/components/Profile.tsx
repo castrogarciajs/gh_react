@@ -9,7 +9,9 @@ export function Profile({ username }: ProfileProp) {
 
       <div className="card-network">
         <p>{username.login}</p>
-        <a href={username.html_url}>Github</a>
+        <a href={username.html_url} target="_blank">
+          <button>Follow</button>
+        </a>
       </div>
     </div>
   );
