@@ -22,3 +22,11 @@ export type Ctx = {
 export type ContextProp = {
   children: ReactNode;
 };
+
+export interface IRepositories {
+  name: string;
+  description: string;
+  html_url: string;
+  language: string;
+  license: string;
+}

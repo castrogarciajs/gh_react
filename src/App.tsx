@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useProvider } from "./hooks/useContext";
-import { User } from "./utils/types";
+import { User, IRepositories } from "./utils/types";
 
 import { Header } from "./components/Header";
 import { Navbar } from "./components/Navbar";
 import { Main } from "./components/Main";
 import { Profile } from "./components/Profile";
 import { UserNotFound } from "./components/_404";
+import { Repositories } from "./components/Repositories";
 
 function App() {
   const [sebastian, setSebastian] = useState<User>({
@@ -14,6 +15,7 @@ function App() {
     avatar_url: "",
     html_url: "",
   });
+  const [repos, setRepos] = useState<IRepositories[]>([]);
   const { username, userNotFound } = useProvider();
 
   useEffect(() => {
@@ -39,8 +41,10 @@ function App() {
       const res = await fetch(
         `${import.meta.env.VITE_GITHUB_USERNAME}/sebastian009w/repos`
       );
-      const data = await res.json();
-      console.log(data);
+      const data: IRepositories[] = await res.json();
+      if (!data) return console.log("not fpund");
+
+      setRepos(data);
     };
     startRepos();
   }, []);
@@ -54,7 +58,10 @@ function App() {
         {userNotFound ? (
           <UserNotFound />
         ) : !username ? (
-          <Profile username={sebastian} />
+          <>
+            <Profile username={sebastian} />
+            <Repositories data={repos} />
+          </>
         ) : (
           <Profile username={username} />
         )}
