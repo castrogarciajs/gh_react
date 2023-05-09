@@ -17,3 +17,7 @@ On port `3000`
 ## contributors
 
 - Johan Sebastian castro
+
+## LICENSE
+
+- MIT
