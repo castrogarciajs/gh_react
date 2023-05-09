@@ -14,6 +14,8 @@ function App() {
     login: "",
     avatar_url: "",
     html_url: "",
+    followers: 0,
+    following: 0,
   });
   const [repos, setRepos] = useState<IRepositories[] | null>([]);
   const { username, userNotFound, repositorios } = useProvider();
