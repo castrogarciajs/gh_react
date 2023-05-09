@@ -14,8 +14,8 @@ export function Profile({ username }: ProfileProp) {
         </a>
       </div>
       <div className="card-follow">
-        <p>{username.followers}</p>
-        <p>{username.following}</p>
+        <p>followers: {username.followers}</p>
+        <p>following: {username.following}</p>
       </div>
     </div>
   );
