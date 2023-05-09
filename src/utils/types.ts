@@ -8,6 +8,8 @@ export interface User {
   avatar_url: string;
   html_url: string;
   login: string;
+  followers: number;
+  following: number;
 }
 export interface ProfileProp {
   username: User;

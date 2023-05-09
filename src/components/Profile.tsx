@@ -13,9 +13,9 @@ export function Profile({ username }: ProfileProp) {
           <button className="card-button">Follow me</button>
         </a>
       </div>
-      <div>
-        <p></p>
-        <p></p>
+      <div className="card-follow">
+        <p>{username.followers}</p>
+        <p>{username.following}</p>
       </div>
     </div>
   );
