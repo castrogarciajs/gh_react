@@ -13,6 +13,10 @@ export function Profile({ username }: ProfileProp) {
           <button className="card-button">Follow me</button>
         </a>
       </div>
+      <div>
+        <p></p>
+        <p></p>
+      </div>
     </div>
   );
 }
