@@ -131,10 +131,15 @@
   }
   .card-follow {
     display: flex;
+
     align-items: center;
 
-    gap: 1.5rem;
+    gap: 3rem;
     color: App.$color-fg-muted;
+    font-size: 1.1rem;
+    p {
+      margin: 0;
+    }
   }
 }
 
