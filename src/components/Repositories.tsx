@@ -8,7 +8,7 @@ export function Repositories({ data }: PropRepos) {
   return (
     <>
       {!data ? (
-        <p>no found</p>
+        <p>Loading...</p>
       ) : (
         data.map((repos) => (
           <div className="repos-card" key={repos.id}>
